@@ -1,0 +1,31 @@
+{
+  "name": "gd-boilerplate",
+  "version": "0.0.1",
+  "description": "gd-boilerplate - AngularJS scaffolding",
+  "authors": [
+    "Gonik Daniel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/GonikDaniel/gd-boilerplate",
+  "devDependencies": {
+    "angular-mocks": "~1.4.x"
+  },
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "angular": "~1.4.x",
+    "angular-i18n": "~1.5.0",
+    "angular-ui-router": "~0.2.17",
+    "angular-cookies": "~1.4.8",
+    "underscore": "~1.8.3",
+    "restangular": "~1.5.1",
+    "ngstorage": "~0.3.10",
+    "angular-animate": "~1.4.x",
+    "angular-sanitize": "~1.4.x",
+    "ng-dialog": "~0.5.6",
+    "spin.js": "spinjs#~2.3.2",
+    "toastr": "~2.0.1",
+    "bootstrap": "~3.1.1",
+    "moment": "~2.6.0",
+    "font-awesome": "~4.0.3"
+  }
+}

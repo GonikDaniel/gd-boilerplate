@@ -1,18 +1,19 @@
-#AngularJS Bootstrap
-
->*Opinionated AngularJS style guide for teams by [@john_papa](//twitter.com/john_papa), adapted according to my preferences*
+gd-boilerplate - AngularJS scaffolding
+========================================
 
 
 ## Structure
-    /build  (created on the fly)
-    /gulp   
-    /src
-        /client
+    /build          (created after build)
+    /report         (plato analyze with jshint and jscs, created after build)
+    /gulp-build     (gulp configs and settings)
+    /src            (main src folder)
+        /client     (app, styles, images and tests)
             /app
-            /content
+            /styles
+            /images
             /test
         /server
-            /data
+            /models
             /routes
     
 ## Requirements
@@ -37,6 +38,7 @@
 Runs locally, no database required.
 
 ### Dev Builds
+> Note: all gulp configs and settings are in gulp-build directory
 The dev build does not optimize the deployed code. It simply runs it in place. You can run a dev build in multiple ways.
 
 ####Option 1 - Serve
@@ -66,23 +68,21 @@ The optimizations are performed by the gulp tasks and include the following list
 - deploying all js, css, images, fonts, and index.html
 
 ## Testing
-Type `gulp test` to run the tests including both unit and midway tests (spins up a server). This will create a watch on the files, with a 5 second delay, to run the tests.
+All specs currently in src/client/test. I'm using karma+jasmine in this boilerplate, but you are free to make any other choice
 
-Testing uses karma, mocha, chai, sinon, ngMidwayTester libraries.
-
-## blocks Modules
+## common Modules
 Block modules are reusable blocks of code that can be used across projects simply by including them as dependencies.
 
-### blocks.logger Module
-The `blocks.logger` module handles logging across the Angular app.
+### common.logger Module
+The `common.logger` module handles logging across the Angular app.
 
-### blocks.exception Module
-The `blocks.exception` module handles exceptions across the Angular app.
+### common.exception Module
+The `common.exception` module handles exceptions across the Angular app.
 
-It depends on the `blocks.logger` module, because the implementation logs the exceptions.
+It depends on the `common.logger` module, because the implementation logs the exceptions.
 
-### blocks.router Module
-The `blocks.router` module contains a routing helper module that assists in adding routes to the $routeProvider.
+### common.router Module
+The `common.router` module contains a routing helper module that assists in adding routes to the $routeProvider.
 
 ## node-inspector
 
@@ -116,20 +116,10 @@ Or run node-inspector in a separate Terminal tab. You can keep it running and ju
 ### node-inspector with Gulp
 Alternative to running node-inspector in its own tab is to use `gulp-shell`
 
-```javascript
-gulp.src('', {read: false})
-    .pipe(plug.shell(['node-inspector']));
-```
+    ```javascript
+    gulp.src('', {read: false})
+        .pipe(plug.shell(['node-inspector']));
+    ```
 
 Run `gulp serve-dev-debug` or `gulp serve-dev-debug-brk` to debug node via the Gulp tasks in this project.
 
-### Issues 
-
-####If a process stays connected find it and kill with these commands
-
-```
-lsof -i TCP|fgrep LISTEN
-kill -9 PID
-```    
-
-# gd-boilerplate

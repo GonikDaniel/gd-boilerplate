@@ -1,0 +1,45 @@
+{
+  "name": "gd-boilerplate",
+  "version": "0.0.1",
+  "description": "gd-boilerplate - AngularJS scaffolding",
+  "authors": [
+    "Gonik Daniel"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/GonikDaniel/gd-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GonikDaniel/gd-boilerplate"
+  },
+  "scripts": {
+    "init": "npm install && bower install",
+    "bower-install": "bower install",
+    "npm-install": "bower install",
+    "start": "node app.js",
+    "test": "gulp test"
+  },
+  "bugs": {
+    "url": "https://github.com/GonikDaniel/gd-boilerplate/issues"
+  },
+  "homepage": "https://github.com/GonikDaniel/gd-boilerplate#readme",
+  "dependencies": {
+    "body-parser": "^1.8.2",
+    "bower": "1.7.1",
+    "compression": "^1.1.0",
+    "cors": "^2.2.0",
+    "crypto": "0.0.3",
+    "express": "^4.9.3",
+    "lodash": "3.x",
+    "method-override": "^1.0.0",
+    "morgan": "^1.1.1",
+    "serve-favicon": "^2.0.1"
+  },
+  "devDependencies": {
+    "faker": "^3.0.1",
+    "ramda": "^0.19.1"
+  },
+  "engines": {
+    "node": "0.12.7",
+    "npm": "3.3.9"
+  }
+}
